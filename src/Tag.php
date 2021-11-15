@@ -21,8 +21,6 @@ class Tag extends Model implements Sortable
 
     public array $translatable = ['name', 'slug'];
 
-    public $guarded = [];
-
     public function scopeWithType(Builder $query, string $type = null): Builder
     {
         if (is_null($type)) {
